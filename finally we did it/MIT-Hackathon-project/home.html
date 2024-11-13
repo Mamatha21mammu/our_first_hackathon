@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Companion</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+          <a href="home.html">StudentCompanion</a>
+        </div>
+        <ul class="navbar-links">
+          
+          <li><a href="todo.html">ToDoList</a></li>
+          <!-- <li><a href="MIT-Hackathon-project/MIT-Hackathon-project/chatbot.html">Chatbot</a></li> -->
+          <li><a href="liveclasse.html">LiveClasses</a></li>
+          <li><a href="chatbot.html">Chatbot</a></li>
+          <li><a href="jobportal.html">JobPortal</a></li>
+          <li><a href="pomodoro.html">PomodoroTimer</a></li>
+        </ul>
+      </nav>
+
+
+
+
+      
+      <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to StudentCompanion</h1>
+            <p>Your go-to platform for productivity and learning</p>
+            <br>
+            <a href="liveclasse.html" class="hero-btn">Explore Features</a>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <div class="header">
+            <h2>Find Job Opportunities by Skill</h2>
+            <p>Select a skill to view related job opportunities and career paths.</p>
+        </div>
+    
+        <div class="skill-select">
+            <label for="skills">Choose a skill:</label>
+            <select id="skills">
+                <option value="">--Select a Skill--</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Data Analysis">Data Analysis</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="Project Management">Project Management</option>
+                <option value="UI/UX Design">UI/UX Design</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Content Writing">Content Writing</option>
+                <option value="SEO">SEO</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                <option value="DevOps">DevOps</option>
+                <option value="Finance">Finance</option>
+                <option value="Sales">Sales</option>
+                <option value="Communication">Communication</option>
+                <option value="Leadership">Leadership</option>
+                <option value="Database Management">Database Management</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Network Administration">Network Administration</option>
+                <option value="Java">Java</option>
+                <option value="HTML/CSS">HTML/CSS</option>
+                <option value="Customer Service">Customer Service</option>
+                <option value="Business Analysis">Business Analysis</option>
+                <option value="Accounting">Accounting</option>
+                <option value="AI">AI</option>
+                <option value="Blockchain">Blockchain</option>
+                <option value="Supply Chain Management">Supply Chain Management</option>
+                <option value="Software Testing">Software Testing</option>
+                <option value="Mobile Development">Mobile Development</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Photography">Photography</option>
+                <!-- Add more skills as needed -->
+            </select>
+        </div>
+        <style>
+            body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+            color: #333;
+            margin-top: 20px;
+            /* width:100%; */
+           
+        }
+
+        /* Container styling */
+        .container {
+            width: 100%;
+            max-width: 80%;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Skill selection */
+        .skill-select label {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        select:hover,
+        select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        /* Results styling */
+        .results {
+            margin-top: 20px;
+        }
+
+        .results h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 5px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 3px;
+        }
+
+        .results p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.5;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .results p:hover {
+            background-color: #d3ebd3;
+        }
+
+        /* Button styling for mobile and desktop */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .results h3 {
+                font-size: 1rem;
+            }
+
+
+            .results p {
+                font-size: 0.9rem;
+            }
+        }
+    
+        </style>
+    
+        <div class="results" id="results">
+            <!-- Job Opportunities and Career Paths will be displayed here -->
+        </div>
+    </div>
+
+        <!-- Chatbot Hero Section -->
+<section class="chatbot-hero-section">
+    <div class="text-container">
+        <h1>Meet Your AI-Powered Chatbot Companion</h1>
+        <p>Our advanced chatbot is here to assist you with instant answers, personalized guidance, and interactive support. Whether you need help with studies, productivity tips, or career advice, our chatbot is designed to make your experience seamless and engaging.</p>
+        <a href="chatbot.html" class="learn-more-btn">Try the Chatbot</a>
+    </div>
+    <div class="image-container">
+        <img src="images/ai.jpg" alt="Chatbot Feature Image">
+    </div>
+</section>
+
+
+
+<section class="job-portal-section">
+    <div class="image-container">
+        <img src="images/job.jpeg" alt="Job Portal Feature Image">
+    </div>
+    <div class="text-container">
+        <h2>Explore Opportunities with Our Job Portal</h2>
+        <p>Our Job Portal connects you to top employers and job opportunities, tailored to your skills and preferences. Discover a wide range of positions in various industries, including tech, finance, education, and more.</p>
+        <p>With advanced filtering options, you can easily find roles that match your career goals. Let our portal be your first step towards a fulfilling and successful career.</p>
+        <a href="jobportal.html" class="learn-more-btn">Explore the Job Portal</a>
+    </div>
+</section>
+ 
+<section class="zoom-integration-section">
+    <div class="text-container">
+        <h2>Seamless Zoom Integration for Live Classes</h2>
+        <p>Experience interactive live sessions with our Zoom integration, bringing instructors and students together in real-time. Participate in discussions, attend lectures, and collaborate with ease, all within a single platform.</p>
+        <p>Our integration with Zoom ensures a smooth, high-quality learning experience with powerful features such as screen sharing, chat, and recording options. Enhance your learning journey with the convenience of live, face-to-face communication.</p>
+        <a href="liveclass.html" class="learn-more-btn">Learn More About Live Classes</a>
+    </div>
+    <div class="image-container">
+        <img src="images/zoom.jpeg" alt="Zoom Integration Feature Image">
+    </div>
+</section>
+
+
+
+    <!-- To-Do List Section -->
+<section class="todo-section">
+    <div class="text-container">
+        <h2>Stay Organized with Our To-Do List</h2>
+        <br>
+        <p>Our To-Do List feature helps you keep track of tasks effortlessly. Simply add tasks, set due dates, and prioritize your schedule. With the option to add sub-tasks, managing your workload has never been easier.</p>
+        <br>
+        <p>Organize your day, meet deadlines, and stay on top of your commitments. This tool is designed to enhance productivity and give you a clear path forward in your academic and personal goals.</p>
+        <br>
+        <a href="todo.html" class="learn-more-btn">Explore To-Do List</a>
+    </div>
+    <div class="image-container">
+        <img src="images/todo.jpeg" alt="To-Do List Feature Image">
+    </div>
+</section>
+
+<!-- Pomodoro Timer Section -->
+<section class="pomodoro-section">
+    <div class="text-container">
+        <h2>Boost Your Productivity with the Pomodoro Timer</h2>
+        <br>
+        <p>Our Pomodoro Timer helps you focus by breaking your work into intervals, usually 25 minutes long, followed by a short break. This technique is proven to enhance concentration and maximize productivity.</p>
+        <br>
+        <p>With structured work and rest periods, you'll find it easier to tackle tasks without feeling overwhelmed. Try it out and see how it transforms your study or work routine.</p>
+        <br>
+        <a href="pomodoro.html" class="learn-more-btn">Learn More about Pomodoro</a>
+    </div>
+    <div class="image-container">
+        <img src="images/pomodoro.png" alt="Pomodoro Timer Feature Image">
+    </div>
+</section>
+
+
+<section class="registration-section">
+    <h2>Student Registration</h2>
+    <form  onsubmit="submitForm(event)" class="registration-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="course">Course of Interest:</label>
+        <select id="course" name="course">
+            <option value="webDevelopment">Web Development</option>
+            <option value="dataScience">Data Science</option>
+            <option value="cyberSecurity">Cyber Security</option>
+            <option value="ai">Artificial Intelligence</option>
+        </select>
+
+        <label for="agree">
+            <input type="checkbox" id="agree" name="agree" required>
+            I agree to the Terms and Conditions
+        </label>
+
+        <button type="submit">Register</button>
+        
+       
+        
+    </form>
+</section>
+<script>
+    function submitForm(event) {
+        event.preventDefault(); // Prevent the default form submission
+        alert("Form submitted successfully!"); // Replace with actual processing logic
+    }
+</script>
+
+<script>
+    // Enhanced skills data with detailed job roles, industries, and career paths
+    const skillData = {
+        "JavaScript": {
+            jobs: ["Frontend Developer", "Backend Developer", "Full Stack Developer", "JavaScript Engineer"],
+            industries: ["Web Development", "Software Development", "E-commerce", "Technology"],
+            paths: ["Junior Developer", "Mid-Level Developer", "Senior Developer", "Technical Lead", "CTO"]
+        },
+        "Python": {
+            jobs: ["Data Scientist", "Backend Developer", "AI Engineer", "Python Developer"],
+            industries: ["Data Science", "AI", "Finance", "Healthcare"],
+            paths: ["Data Analyst", "Data Engineer", "Machine Learning Specialist", "Senior Data Scientist"]
+        },
+        "Data Analysis": {
+            jobs: ["Data Analyst", "Business Intelligence Analyst", "Research Scientist", "Quantitative Analyst"],
+            industries: ["Finance", "Healthcare", "E-commerce", "Marketing"],
+            paths: ["Junior Analyst", "Senior Analyst", "Data Scientist", "BI Specialist"]
+        },
+        "Machine Learning": {
+            jobs: ["Machine Learning Engineer", "AI Specialist", "Data Scientist", "ML Researcher"],
+            industries: ["Artificial Intelligence", "Healthcare", "Retail", "Finance"],
+            paths: ["ML Engineer", "AI Engineer", "Senior ML Engineer", "AI Specialist"]
+        },
+        "Project Management": {
+            jobs: ["Project Coordinator", "Project Manager", "Program Manager", "Product Owner"],
+            industries: ["Technology", "Finance", "Healthcare", "Manufacturing"],
+            paths: ["Project Coordinator", "Project Manager", "Senior PM", "Program Manager", "PMO Lead"]
+        },
+        "Digital Marketing": {
+            jobs: ["Digital Marketing Specialist", "Content Strategist", "Social Media Manager", "SEO Specialist"],
+            industries: ["Marketing", "E-commerce", "Retail", "Media"],
+            paths: ["Junior Marketer", "SEO Specialist", "Digital Marketing Manager", "CMO"]
+        },
+        "Cloud Computing": {
+            jobs: ["Cloud Architect", "Cloud Engineer", "DevOps Engineer", "Infrastructure Engineer"],
+            industries: ["Technology", "Telecommunications", "Finance", "Healthcare"],
+            paths: ["Cloud Support", "Cloud Engineer", "DevOps Specialist", "Cloud Architect", "Cloud Director"]
+        },
+        "Finance": {
+            jobs: ["Financial Analyst", "Investment Banker", "Accountant", "Financial Advisor"],
+            industries: ["Banking", "Investment", "Consulting", "Insurance"],
+            paths: ["Junior Analyst", "Senior Analyst", "Finance Manager", "Director of Finance"]
+        },
+        "Cybersecurity": {
+            jobs: ["Security Analyst", "Penetration Tester", "Network Security Engineer", "Cybersecurity Specialist"],
+            industries: ["Technology", "Banking", "Government", "Healthcare"],
+            paths: ["Security Analyst", "Senior Security Analyst", "Cybersecurity Lead", "CISO"]
+        },
+        "Content Writing": {
+            jobs: ["Content Writer", "Copywriter", "Content Strategist", "Technical Writer"],
+            industries: ["Media", "Marketing", "Technology", "Healthcare"],
+            paths: ["Junior Writer", "Senior Writer", "Content Manager", "Head of Content"]
+        },
+        "Mobile Development": {
+            jobs: ["Android Developer", "iOS Developer", "Mobile App Developer", "Cross-Platform Developer"],
+            industries: ["Technology", "Entertainment", "Education", "Finance"],
+            paths: ["Junior Developer", "Senior Developer", "Lead Developer", "Product Manager"]
+        },
+        "SEO": {
+            jobs: ["SEO Specialist", "SEO Analyst", "Digital Marketing Specialist", "Content SEO Strategist"],
+            industries: ["Marketing", "E-commerce", "Media", "Consulting"],
+            paths: ["SEO Assistant", "SEO Specialist", "SEO Manager", "Head of SEO"]
+        }
+        // Additional skills can be added similarly
+    };
+
+    // Display function for job opportunities and career paths
+    document.getElementById("skills").addEventListener("change", function () {
+        const selectedSkill = this.value;
+        const resultsDiv = document.getElementById("results");
+        
+        if (selectedSkill && skillData[selectedSkill]) {
+            const { jobs, industries, paths } = skillData[selectedSkill];
+            resultsDiv.innerHTML = `
+                <h3>Job Opportunities:</h3>
+                <p>${jobs.join(", ")}</p>
+                <h3>Industries:</h3>
+                <p>${industries.join(", ")}</p>
+                <h3>Career Paths:</h3>
+                <p>${paths.join(" ➔ ")}</p>
+            `;
+        } else {
+            resultsDiv.innerHTML = "<p>Please select a skill to view details.</p>";
+        }
+    });
+</script>
+
+
+
+
+      <!-- <script>
+        // JavaScript for Navbar Links (Example Functionality)
+        document.querySelectorAll('.navbar-links a').forEach(link => {
+          link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const sectionID = this.getAttribute('href').substring(1);
+            document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+        </script> -->
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 StudentCompanion. All rights reserved.</p>
+            </div>
+        </footer>
+        <style>
+   
+        </style>
+
+        <script src="https://widget.cxgenie.ai/widget.js" data-aid="9f146204-c386-4d2b-a434-3b5f9d0ca3d1"
+		
+		 data-lang="en"></script>
+</body>
+</html>

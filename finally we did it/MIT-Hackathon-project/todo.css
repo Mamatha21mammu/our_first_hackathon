@@ -1,0 +1,146 @@
+
+    
+   /* Basic Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000909;
+    color: #fff;
+  }
+  
+  .navbar-logo a {
+    font-size: 1.5em;
+    color: #f21313;
+    text-decoration: none;
+  }
+  
+  .navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 5px;
+
+    transition: background-color 0.3s;
+  }
+  
+  .navbar-links li a:hover {
+    background-color: #e1baba;
+    border-radius: 5px;
+  }
+   
+   
+   
+   
+   
+   
+   /* * { box-sizing: border-box; } */
+    
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        display: flex;
+        justify-content: center;
+        padding-top: 0px;
+    }
+
+    #todo-container {
+        margin-top: 75px;
+        padding-top: 80%;
+        width: 100%;
+        margin: auto;
+        max-width: 7000px;
+        background-color: #ffffff;
+        border-radius: 75px;
+        box-shadow: 0px 4px 12px rgba(0, 23, 0233, 0.9);
+        padding: 350px;
+    }
+
+    #todo-container h1 {
+        text-align: center;
+        color: #6b46c1;
+        font-size: 1.8em;
+        margin-bottom: 40px;
+    }
+
+    #task-input, .subtask-input, #date-input {
+        padding: 20px;
+        text-align: left;
+        padding-left: 250px;
+        border: 5px solid #a3dc4e;
+        border-radius: 69px;
+        margin-right: 81px;
+        font-size: 1em;
+        outline: none;
+        transition: border-color 0.1s ease;
+    }
+
+    /* Hover effect on inputs */
+    #task-input:hover, .subtask-input:hover, #date-input:hover {
+        border-color: #0ed4ad;
+    }
+
+    .add-task-btn, .add-subtask-btn, .delete-task-btn, .delete-subtask-btn {
+        cursor: pointer;
+        padding: 12px 20px;
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #fff;
+        background-color: #6b46c1;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    /* Hover effect on buttons */
+    .add-task-btn:hover, .add-subtask-btn:hover, .delete-task-btn:hover, .delete-subtask-btn:hover {
+        background-color: #4c3d99;
+        transform: translateY(-2px);
+    }
+
+    .task {
+        margin-top: 15px;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #f7fafc;
+        border-left: 4px solid #6b46c1;
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect on task */
+    .task:hover {
+        background-color: #edf2f7;
+    }
+
+    .task-number {
+        font-weight: bold;
+        color: #6b46c1;
+        position: absolute;
+        top: 15px;
+        left: -35px;
+    }
+
+    .subtask {
+        margin-left: 30px;
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .subtask-number {
+        font-weight: bold;
+        color: #4a5568;
+        margin-right: 8px;
+    }
+
+    /* Hover effect on subtasks */
+    .subtask:hover {
+        background-color: #f1f5f9;
+    }

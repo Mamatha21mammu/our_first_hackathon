@@ -1,0 +1,500 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.class-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.class-item {
+    background: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.class-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.class-item h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+.class-item p {
+    font-size: 0.9rem;
+    margin: 8px 0;
+    color: #666;
+}
+
+.instructor, .datetime {
+    font-weight: bold;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.class-status {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.class-status.ongoing {
+    background-color: #FFA500; /* Orange for ongoing classes */
+}
+
+.class-status.completed {
+    background-color: #999; /* Gray for completed classes */
+}
+
+.join-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+}
+
+.join-btn:hover {
+    background-color: #45a049;
+    box-shadow: 0px 4px 10px rgba(0, 128, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .class-item {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+}
+
+
+.class-highlights {
+    padding: 20px;
+    background: #e9dada;
+}
+
+.class-highlights h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    background: #ffffff;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.highlight h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.highlight p {
+    color: #555;
+    margin-top: 8px;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 20px;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #4CAF50;
+}
+
+.faq-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    max-width: 600px;
+}
+
+.faq-item h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Signup CTA Section */
+.signup-cta {
+    padding: 30px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.signup-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.signup-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.signup-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: white;
+    color: #4CAF50;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .highlight,
+    .faq-item {
+        width: 100%;
+    }
+}
+
+#faqs {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+}
+
+#faqs .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#faqs h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.faq-item .faq-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.faq-item .faq-answer {
+    font-size: 1rem;
+    color: #555;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item.active .faq-answer {
+    display: block; /* Display when the question is clicked */
+}
+
+.faq-item:hover {
+    background-color: #e9e9e9;
+    transition: background-color 0.3s ease;
+}
+
+/* Styling for responsive design */
+@media screen and (max-width: 600px) {
+    #faqs h2 {
+        font-size: 2rem;
+    }
+
+    .faq-item .faq-question {
+        font-size: 1rem;
+    }
+
+    .faq-item .faq-answer {
+        font-size: 0.9rem;
+    }
+}
+
+
+.live-class-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .sidebar {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar h3 {
+    color: #7a7d82;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .menu {
+    list-style: none;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-item.active,
+  .menu-item:hover {
+    background-color: #e3f2fd;
+    color: #1976d2;
+  }
+  
+  .menu-item span {
+    margin-left: 10px;
+  }
+  
+  .courses {
+    flex: 2;
+  }
+  
+  .courses h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .course-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .course-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .course-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .course-card h4 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .course-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .view-program {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    padding: 0 20px;
+    background-color: #f0efe3;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .hero-text {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .hero-image {
+    flex: 1;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    
+    .hero-text {
+      padding-right: 0;
+    }
+    
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-image {
+      margin-bottom: 20px;
+    }
+  }
+  

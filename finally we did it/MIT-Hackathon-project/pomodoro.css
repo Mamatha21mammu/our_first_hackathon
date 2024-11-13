@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* Pomodoro Section Styles */
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content {
+    flex: 1;
+    padding-right: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .image {
+        padding-top: 10px;
+    }
+}

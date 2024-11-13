@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Chatbot</title>
+    <link rel="stylesheet" href="jobportal.css">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+              <a href="home.html">StudentCompanion</a>
+            </div>
+            <ul class="navbar-links">
+              
+              <li><a href="todo.html">ToDoList</a></li>
+              <li><a href="chatbot">Chatbot</a></li>
+              <li><a href="liveclasse.html">LiveClasses</a></li>
+              <li><a href="jobportal.html">JobPortal</a></li>
+              <li><a href="pomodoro.html">PomodoroTimer</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Dream Job</h1>
+            <p>Browse through thousands of job listings and take the next step in your career.</p>
+            <a href="#" class="btn">Start Searching</a>
+        </div>
+        
+    </section>
+   
+    <div class="search-bar">
+        <input type="text" placeholder="Enter skills / designations / companies">
+        <input type="text" placeholder="Select experience">
+        <input type="text" placeholder="Enter location">
+        <button>Search</button>
+      </div>
+      <div class="mock-interview-banner">
+        <div class="banner-text">
+          <h2>Practice customised mock interview with AI!</h2>
+          <p>Get AI answers, tips and insights</p>
+          <button>Start for free</button>
+        </div>
+        <div class="banner-image">
+          <img src="images/jobp2.jpeg" alt="AI Mock Interview">
+        </div>
+      </div>
+
+      <div class="categories">
+        <button>Remote</button>
+        <button>MNC</button>
+        <button>Data Science</button>
+        <button>Fresher</button>
+        <button>Project Mgmt</button>
+        <button>Internship</button>
+        <button>HR</button>
+        <button>Startup</button>
+        <button>Software & IT</button>
+        <button>Engineering</button>
+        <button>Marketing</button>
+      </div>
+
+      <div class="container">
+        <h2>Top companies hiring now</h2>
+        <div class="scroll-container">
+          <div class="card">
+            <h3>MNCs</h3>
+            <p>2K+ are actively hiring</p>
+            <div class="logos">
+              <img src="images/images/google.jpeg" alt="Company Logo">
+              <img src="images/images/IBM.jpeg" alt="Company Logo">
+              <img src="images/images/tata.png" alt="Company Logo">
+              <img src="images/images/nvidia.png" alt="Company Logo">
+              <!-- Add more logos as needed -->
+            </div>
+          </div>
+          <div class="card">
+            <h3>EdTech</h3>
+            <p>2K+ are actively hiring</p>
+            <div class="logos">
+              <img src="images/images/pw.jpeg" alt="Company Logo">
+              <img src="images/images/unacedemy.png" alt="Company Logo">
+              <img src="images/images/coursera.png" alt="Company Logo">
+              <img src="images/images/udemy.png" alt="Company Logo">
+              <!-- Add more logos as needed -->
+            </div>
+          </div>
+          <div class="card">
+            <h3>HealthCare</h3>
+            <p>2K+ are actively hiring</p>
+            <div class="logos">
+              <img src="images/images/thyrocare.png" alt="Company Logo">
+              <img src="images/images/apollo.jpeg" alt="Company Logo">
+              <img src="images/images/biotech.jpeg" alt="Company Logo">
+              <!-- Add more logos as needed -->
+            </div>
+          </div>
+         
+          <div class="card">
+            <h3>Unicorns</h3>
+            <p>2K+ are actively hiring</p>
+            <div class="logos">
+              <img src="images/images/ola.png" alt="Company Logo">
+              <img src="images/images/shaadi.png" alt="Company Logo">
+              <img src="images/images/oyo.png" alt="Company Logo">
+
+              <img src="images/images/uber.png" alt="Company Logo">
+              <!-- Add more logos as needed -->
+            </div>
+          </div>
+          <div class="card">
+            <h3>E-com</h3>
+            <p>1K+ are actively hiring</p>
+            <div class="logos">
+              <img src="images/images/amazon.jpeg" alt="Company Logo">
+              <img src="images/images/alibaba.png" alt="Company Logo">
+              <img src="images/images/flifkart.jpeg" alt="Company Logo">
+              <img src="images/images/roposo.png" alt="Company Logo">
+              <!-- Add more logos as needed -->
+            </div>
+          </div>
+          <!-- Add more cards as needed -->
+        </div>
+      </div>
+
+      <div class="job-listing-container">
+        <!-- Filters Section -->
+        <div class="filters">
+          <h3>All Filters</h3>
+          <div class="filter-group">
+            <h4>Department</h4>
+            <ul>
+              <li><input type="checkbox" checked> Engineering - Hardware (2148)</li>
+              <li><input type="checkbox" checked> Engineering - Software (22975)</li>
+              <li><input type="checkbox" checked> IT & Information Security (3527)</li>
+              <li><input type="checkbox"> Sales & Business Development (12646)</li>
+            </ul>
+            <a href="#">View More</a>
+          </div>
+    
+          <div class="filter-group">
+            <h4>Experience</h4>
+            <input type="range" min="0" max="20" value="20">
+            <div class="range-labels">
+              <span>0 Yrs</span>
+              <span>Any</span>
+            </div>
+          </div>
+    
+          <div class="filter-group">
+            <h4>Salary</h4>
+            <ul>
+              <li><input type="checkbox"> 0-3 Lakhs (2080)</li>
+              <li><input type="checkbox"> 3-6 Lakhs (12537)</li>
+              <li><input type="checkbox"> 6-10 Lakhs (18122)</li>
+              <li><input type="checkbox"> 10-15 Lakhs (13220)</li>
+            </ul>
+            <a href="#">View More</a>
+          </div>
+        </div>
+    
+        <!-- Job Listings Section -->
+        <div class="job-listings">
+          <div class="job-card">
+            <h4>Senior DevOps Engineer</h4>
+            <p>Capco ★ 3.6 | 454 Reviews</p>
+            <p>6-10 Yrs | Not disclosed | Kolkata, Mumbai, N...</p>
+            <p>Bachelor's degree in computer science, Information Technology, or a related field</p>
+            <div class="tags">
+              <span>cd</span> <span>python</span> <span>linux server</span> <span>version control</span>
+            </div>
+          </div>
+    
+          <div class="job-card">
+            <h4>Junior Product Owner ISO</h4>
+            <p>Capco ★ 3.6 | 454 Reviews</p>
+            <p>3-8 Yrs | Not disclosed | Kolkata, Mumbai, N...</p>
+            <p>Present detailed solution and user stories with required stakeholders...</p>
+            <div class="tags">
+              <span>financial services</span> <span>software testing</span> <span>solutioning</span>
+            </div>
+          </div>
+    
+          <!-- Add more job cards as needed -->
+        </div>
+    
+        <!-- Featured Companies Section -->
+        <div class="featured-companies">
+          <h4>See 143 jobs in Featured Companies</h4>
+          <div class="company-logos">
+            <img src="images/images/oyo.png" alt="Fiserv">
+            <img src="images/images/shaadi.png" alt="Newgen">
+            <img src="images/images/google.jpeg" alt="Epiq">
+            <img src="images/images/IBM.jpeg" alt="Cybage">
+            <!-- Add more logos as needed -->
+          </div>
+    
+          <div class="advertisement">
+            <img src="images/images/ola.png" alt="Advertisement">
+            <p>Get 3X more profile views from recruiters</p>
+            <a href="home.html">Know More</a>
+          </div>
+        </div>
+      </div>
+
+
+
+    <!-- Image and Text Section (Jobs Overview) -->
+    <section class="overview">
+        <div class="container">
+            <div class="image-text">
+                <img src="images/jobp2.jpeg" alt="Job Overview">
+                <div class="text">
+                    <h2>Find the Best Job for You</h2>
+                    <p>Our job portal connects you to top employers looking for talented professionals like you. Whether you're looking for full-time, part-time, or freelance work, we have job listings for every type of career.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Job Listings Section -->
+    <section id="job-listings" class="job-listings">
+        <div class="container">
+            <h2>Job Listings</h2>
+            <div class="job-container">
+                <div class="job">
+                    <img src="images/images/web.jpeg" alt="Job Image">
+                    <div class="job-details">
+                        <h3>Software Engineer</h3>
+                        <p>Company: TechX</p>
+                        <p>Location: New York</p>
+                        <a href="#">Apply Now</a>
+                    </div>
+                </div>
+                <div class="job">
+                    <img src="images/images/app.jpeg" alt="Job Image">
+                    <div class="job-details">
+                        <h3>Marketing Manager</h3>
+                        <p>Company: Marketify</p>
+                        <p>Location: San Francisco</p>
+                        <a href="#">Apply Now</a>
+                    </div>
+                </div>
+                <div class="job">
+                    <img src="images/images.png" alt="Job Image">
+                    <div class="job-details">
+                        <h3>Marketing Manager</h3>
+                        <p>Company: Marketify</p>
+                        <p>Location: San Francisco</p>
+                        <a href="#">Apply Now</a>
+                    </div>
+                </div>
+                <!-- Add more job listings as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Image and Text Section (Job Seeker Tips) -->
+    <section class="tips">
+        <div class="container">
+            <div class="image-text">
+                <div class="text">
+                    <h2>Tips for Job Seekers</h2>
+                    <p>Improve your job search strategy with our expert tips. From creating a standout resume to preparing for interviews, we offer valuable insights to help you land your next job.</p>
+                </div>
+                <img src="images/jobp2.jpeg" alt="Job Seeker Tips">
+            </div>
+        </div>
+    </section>
+    <script>
+        // Optional JavaScript if you want to add any interactivity
+// This can be used to add buttons to scroll left and right
+
+document.querySelector('.scroll-container').addEventListener('wheel', (e) => {
+  e.preventDefault();
+  document.querySelector('.scroll-container').scrollLeft += e.deltaY;
+});
+
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 JobPortal. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

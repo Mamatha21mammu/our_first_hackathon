@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="home.css">
+    
+    <style>
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: hsl(0, 0%, 4%);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar-logo a {
+            font-size: 1.5em;
+            color: #e82020;
+            text-decoration: none;
+        }
+
+        .navbar-links {
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-links li a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* To-Do List container styling */
+        /* #todo-container {
+            max-width: 600px;
+            margin: 100px auto; /* Adds space below navbar */
+            /* padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .add-task-btn {
+            margin-left: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .add-task-btn:hover {
+            background-color: #45a049;
+        }
+
+        .task {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .subtask-input,
+        .task input[type="text"] {
+            margin-top: 10px;
+            width: calc(100% - 90px);
+        } */ */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+              <a href="home.html">StudentCompanion</a>
+            </div>
+            <ul class="navbar-links">
+              <!-- <li><a href="todo.html">ToDoList</a></li> -->
+              <li><a href="chatbot">Chatbot</a></li>
+              <li><a href="liveclasse.html">LiveClasses</a></li>
+              <li><a href="jobportal.html">JobPortal</a></li>
+              <li><a href="pomodoro.html">PomodoroTimer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="todo-container">
+        <h1>My To-Do List</h1>
+        <div style="display: flex; align-items: center;">
+            <input type="text" id="task-input" placeholder="Enter main task">
+            <input type="date" id="date-input" placeholder="Due Date">
+            <button class="add-task-btn" onclick="addTask()">Add Task</button>
+        </div>
+        <div id="task-list"></div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            updateTaskNumbers();
+        }
+
+        function addTask() {
+            const taskInput = document.getElementById("task-input");
+            const dateInput = document.getElementById("date-input");
+            const taskText = taskInput.value.trim();
+            const dueDate = dateInput.value;
+
+            if (taskText === "") {
+                alert("Please enter a task.");
+                return;
+            }
+
+            const task = document.createElement("div");
+            task.classList.add("task");
+
+            const taskNumber = document.createElement("span");
+            taskNumber.classList.add("task-number");
+            taskNumber.textContent = getCurrentTaskNumber() + ". ";
+
+            const taskTitle = document.createElement("p");
+            taskTitle.textContent = taskText;
+
+            const taskDueDate = document.createElement("p");
+            taskDueDate.style.color = "#718096";
+            taskDueDate.textContent = dueDate ? `Due: ${dueDate}` : "No due date";
+
+            const deleteTaskButton = document.createElement("button");
+            deleteTaskButton.classList.add("delete-task-btn");
+            deleteTaskButton.textContent = "Delete Task";
+            deleteTaskButton.onclick = function () {
+                task.remove();
+                updateTaskNumbers();
+            };
+
+            task.appendChild(taskNumber);
+            task.appendChild(taskTitle);
+            task.appendChild(taskDueDate);
+            task.appendChild(deleteTaskButton);
+
+            const subtaskInput = document.createElement("input");
+            subtaskInput.type = "text";
+            subtaskInput.placeholder = "Enter sub-task";
+            subtaskInput.classList.add("subtask-input");
+
+            const addSubtaskButton = document.createElement("button");
+            addSubtaskButton.classList.add("add-subtask-btn");
+            addSubtaskButton.textContent = "Add Sub-task";
+            addSubtaskButton.onclick = () => addSubtask(task, subtaskInput);
+
+            task.appendChild(subtaskInput);
+            task.appendChild(addSubtaskButton);
+
+            document.getElementById("task-list").appendChild(task);
+
+            taskInput.value = "";
+            dateInput.value = "";
+        }
+
+        function getCurrentTaskNumber() {
+            const tasks = document.querySelectorAll(".task");
+            return tasks.length + 1;
+        }
+
+        function updateTaskNumbers() {
+            const tasks = document.querySelectorAll(".task");
+            tasks.forEach((task, index) => {
+                const taskNumber = task.querySelector(".task-number");
+                taskNumber.textContent = (index + 1) + ". ";
+            });
+        }
+
+        function addSubtask(task, subtaskInput) {
+            const subtaskText = subtaskInput.value.trim();
+
+            if (subtaskText === "") {
+                alert("Please enter a sub-task.");
+                return;
+            }
+
+            const subtask = document.createElement("div");
+            subtask.classList.add("subtask");
+
+            const subtaskNumber = document.createElement("span");
+            subtaskNumber.classList.add("subtask-number");
+            subtaskNumber.textContent = task.querySelectorAll(".subtask").length + 1 + ". ";
+
+            const subtaskTextElement = document.createElement("p");
+            subtaskTextElement.textContent = subtaskText;
+
+            const deleteSubtaskButton = document.createElement("button");
+            deleteSubtaskButton.classList.add("delete-subtask-btn");
+            deleteSubtaskButton.textContent = "Delete Sub-task";
+            deleteSubtaskButton.onclick = function () {
+                subtask.remove();
+            };
+
+            subtask.appendChild(subtaskNumber);
+            subtask.appendChild(subtaskTextElement);
+            subtask.appendChild(deleteSubtaskButton);
+            task.appendChild(subtask);
+
+            subtaskInput.value = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+/* Basic Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000909;
+    color: #fff;
+  }
+  
+  .navbar-logo a {
+    font-size: 1.5em;
+    color: #f21313;
+    text-decoration: none;
+  }
+  
+  .navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 5px;
+
+    transition: background-color 0.3s;
+  }
+  
+  .navbar-links li a:hover {
+    background-color: #e1baba;
+    border-radius: 5px;
+  }
+
+  .hero {
+    background: url('images/hero.jpeg') no-repeat center center / cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    background-color: #FFD700;
+    color: #2a2a2a;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #e0c100;
+}
+
+.image-text-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-container {
+    max-width: 600px;
+}
+
+.text-container h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.text-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.learn-more-btn {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #FFD700;
+    color: #2a2a2a;
+}
+
+
+/* To-Do List Section styling */
+.todo-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+.todo-section .image-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.todo-section .text-container {
+    max-width: 600px;
+}
+
+.todo-section .text-container h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.todo-section .text-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.todo-section .learn-more-btn {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.todo-section .learn-more-btn:hover {
+    background-color: #FFD700;
+    color: #2a2a2a;
+}
+
+
+/* Pomodoro Timer Section styling */
+/* Pomodoro Timer Section styling */
+.pomodoro-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 20px;
+}
+
+.pomodoro-section .image-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.pomodoro-section .text-container {
+    max-width: 600px;
+}
+
+.pomodoro-section .text-container h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.pomodoro-section .text-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.pomodoro-section .learn-more-btn {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pomodoro-section .learn-more-btn:hover {
+    background-color: #FFD700;
+    color: #2a2a2a;
+}
+
+/* Job Portal Section styling */
+/* Job Portal Section styling */
+.job-portal-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 20px;
+    flex-direction: row-reverse; /* Ensures the image is on the right */
+}
+
+.job-portal-section .image-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.job-portal-section .text-container {
+    max-width: 600px;
+}
+
+.job-portal-section .text-container h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.job-portal-section .text-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.job-portal-section .learn-more-btn {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.job-portal-section .learn-more-btn:hover {
+    background-color: #FFD700;
+    color: #2a2a2a;
+}
+
+/* Chatbot Hero Section styling */
+.chatbot-hero-section {
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 20px;
+    background-color: #f1dada;
+    /* background: url('images/hero1.jpg') no-repeat center center / cover; */
+   
+    margin-top: 50px; 
+}
+
+.chatbot-hero-section .text-container {
+    max-width: 600px;
+}
+
+.chatbot-hero-section .text-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.chatbot-hero-section .text-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.chatbot-hero-section .learn-more-btn {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-hero-section .learn-more-btn:hover {
+    background-color: #FFD700;
+    color: #2a2a2a;
+}
+
+.chatbot-hero-section .image-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Zoom Integration Section styling */
+.zoom-integration-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 20px;
+    background-color: #f9f9f9;
+}
+
+.zoom-integration-section .text-container {
+    max-width: 600px;
+}
+
+.zoom-integration-section .text-container h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.zoom-integration-section .text-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.zoom-integration-section .learn-more-btn {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.zoom-integration-section .learn-more-btn:hover {
+    background-color: #FFD700;
+    color: #2a2a2a;
+}
+
+.zoom-integration-section .image-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.registration-section {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registration-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form label {
+    margin-top: 10px;
+    color: #555;
+    font-weight: bold;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.registration-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.registration-form button {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.registration-form button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
